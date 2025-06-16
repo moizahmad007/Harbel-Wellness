@@ -1,0 +1,115 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container for the topbar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #2d3748, #556474);
+}
+
+/* Styling for the logo */
+.logo img {
+  width: 120px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for the logo */
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+/* Container for navigation links */
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  align-items: center;
+  flex: 1;
+  flex-wrap: nowrap;
+}
+
+/* Styling for navigation buttons */
+.nav-link {
+  background: none;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 15px;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for the navigation buttons */
+.nav-link:hover {
+  color: #f0f0f0;
+  border-color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Styling for menu icon */
+.menu-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: none; /* Hide the menu icon by default */
+}
+
+/* For large screens, display navigation in row */
+@media (min-width: 769px) {
+  .menu-icon {
+    display: none; /* Hide menu icon on large screens */
+  }
+  .nav {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+}
+
+/* For smaller screens (Mobile) */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block; /* Show menu icon */
+  }
+.top-bar{
+  max-height: 120px;
+}
+
+  /* Hide the menu links by default on mobile */
+  .nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 120px; /* Adjust position to appear below the topbar */
+    background: linear-gradient(135deg, #2d3748, #556474);
+    padding: 10px 0;
+    border-radius: 8px;
+    left: 0;
+  }
+
+  /* When the menu is toggled (when menu icon is clicked) */
+  .nav.show {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 12px;
+    text-align: center;
+    font-size: 1rem;
+  }
+}

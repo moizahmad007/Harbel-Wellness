@@ -1,0 +1,203 @@
+/* Main Container */
+.main-content {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Registration Page */
+.registration-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Language-based text alignment */
+.registration-page[data-language="ur"] {
+  text-align: right; /* For Urdu */
+}
+
+.registration-page h2, 
+.registration-page h3 {
+  font-size: 24px;
+  color: #2c3e50;
+  text-align: center; /* Center for headings */
+}
+
+/* Heading style */
+.registration-page h2 {
+  background: #2d3748; /* Solid background color */
+  color: #ffffff;
+  padding: 25px 20px;
+  border-radius: 8px;
+  position: relative;
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 2px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for heading */
+.registration-page h2:hover {
+  color: #ffffff; /* Change text color on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Decorative underline with animation */
+.registration-page h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  width: 50%;
+  height: 3px;
+  background: #f0a500; /* Gold-colored underline */
+  border-radius: 2px;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Hover effect for underline */
+.registration-page h2:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) scaleX(1.1); /* Smooth scale effect */
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-size: 24px;
+  color: #555;
+  display: block;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+  text-align: left; /* Default alignment for input fields */
+}
+
+/* Right alignment for Urdu */
+.registration-page[data-language="ur"] input,
+.registration-page[data-language="ur"] select,
+.registration-page[data-language="ur"] textarea {
+  text-align: right;
+}
+
+input[type="number"]:focus,
+select:focus,
+textarea:focus,
+input[type="text"]:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+input[type="file"] {
+  padding: 5px;
+  margin-top: 10px;
+}
+
+/* Button Styles */
+button[type="submit"], .edit-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover, .edit-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .registration-page {
+    padding: 20px;
+  }
+
+  form {
+    gap: 20px;
+  }
+
+  input, select, textarea {
+    padding: 10px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Placeholder Styles */
+input::placeholder, select::placeholder {
+  color: #888;
+}
+
+input[type="number"]:focus::placeholder,
+select:focus::placeholder {
+  color: #3498db;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Back Button */
+.back-btn {
+  padding: 12px 25px;
+  background-color: #3498db;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.back-btn:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+/* Slide Animation for Heading */
+@keyframes slide {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Remove default list item bullets */
+li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}

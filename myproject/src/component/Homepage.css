@@ -1,0 +1,170 @@
+/* Homepage Styling */
+.homepage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #ffffff, rgb(212, 225, 237));
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out 0.5s forwards;
+  }
+  
+  .profile-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(to right, #ffffff, rgb(212, 225, 237));
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    transform: translateY(-20px);
+    animation: slideUp 0.8s ease-in-out forwards;
+  }
+  
+  .profile-image {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out 1.5s forwards;
+  }
+  
+  .profile-info {
+    text-align: center;
+
+  }
+  
+  .profile-info h4 {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .profile-info h2
+  {
+    color: grey;
+  }
+  .profile-info h3 {
+    font-size: 35px;
+    margin: 5px 0;
+    color: #333;
+  }
+  
+  .contact-info {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .contact-info p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .contact-info strong {
+    color: #333;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(-30px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .homepage {
+      padding: 15px;
+    }
+  
+    .profile-card {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .profile-image {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .profile-info h2,
+    .profile-info h3 {
+      font-size: 1rem;
+    }
+  
+    .contact-info p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Heading style */
+.homepage h1 {
+  background: #2d3748; /* Solid background color */
+  color: #ffffff;
+  padding: 25px 20px;
+  border-radius: 8px;
+  position: relative;
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 2px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for heading */
+.homepage h1:hover {
+  color: #ffffff; /* Change text color on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Decorative underline with animation */
+.homepage h1::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  width: 50%;
+  height: 3px;
+  background: #f0a500; /* Gold-colored underline */
+  border-radius: 2px;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Hover effect for underline */
+.homepage h1:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) scaleX(1.1); /* Smooth scale effect */
+}
