@@ -1,2 +1,2 @@
-# Harbel-Wellness
-Harbel Wellness website
+# Herbal-Wellness
+Herbal Wellness website
